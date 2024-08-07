@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array methods - Find</title>
+  </head>
+  <body>
+    <script>
+      const users = [
+        { name: "Alice", age: 25 },
+        { name: "Bob", age: 30 },
+        { name: "Charlie", age: 35 },
+        { name: "Dave", age: 40 },
+        { name: "Charles", age: 55 },
+        { name: "Charles", age: 20 },
+        { name: "Charles", age: 45 },
+        { name: "David", age: 50 },
+      ];
+
+      /* const userOver30 = users.find((user) => user.age > 30);
+      console.log(userOver30); */
+
+      const userNamedCharles = users.find(function (user, index) {
+        console.log(index);
+        return user.name === "Charles";
+      });
+      console.log(userNamedCharles);
+    </script>
+  </body>
+</html>
